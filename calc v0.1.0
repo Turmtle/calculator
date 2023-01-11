@@ -1,0 +1,127 @@
+#include <iostream>
+#include <cmath>
+#include <stdlib.h>
+
+using namespace std;
+
+int
+funcCalcRedo ()
+{
+  double x;
+  double y;
+  string stringOp;
+  cout <<
+    "Select Operation (+, -, *, /, sqrt, ^, cos, tan, sin, absolute_value, arctan, arcsin, arccos, \n log)";
+  cin >> stringOp;
+  cout << "First Number";
+  cin >> x;
+  if (stringOp == "sqrt")
+    {
+      double squareRoot = sqrt (x);
+      cout << squareRoot;
+
+    }
+  else if (stringOp == "sin")
+    {
+      double sinOf = sin (x);
+      cout << sinOf;
+
+    }
+  else if (stringOp == "arcsin")
+    {
+      double arcsinOf = asin (x);
+      cout << arcsinOf;
+      
+    }
+  else if (stringOp == "tan")
+    {
+      double tanOf = tan (x);
+      cout << tanOf;
+
+    }
+  else if (stringOp == "arctan")
+    {
+      double arctanOf = atan (x);
+      cout << arctanOf;
+      
+    }
+  else if (stringOp == "cos")
+    {
+      double cosOf = cos (x);
+      cout << cosOf;
+
+    }
+  else if (stringOp == "arccos")
+    {
+      double arccosOf = acos (x);
+      cout << arccosOf;
+      
+    }
+  else if (stringOp == "absolute_value")
+    {
+      double absVal = abs (x);
+      cout << absVal;
+
+    }
+  else if (stringOp == "log")
+    {
+        double logE = log (x);
+        cout << logE;
+    }
+  else if (stringOp == "+")
+    {
+      cout << "Second Number";
+      cin >> y;
+      double sum = x + y;
+      cout << sum;
+    }
+  else if (stringOp == "-")
+    {
+      cout << "Second Number";
+      cin >> y;
+      double sumSub = x - y;
+      cout << sumSub;
+    }
+  else if (stringOp == "*")
+    {
+      cout << "Second Number";
+      cin >> y;
+      double product = x * y;
+      cout << product;
+    }
+  else if (stringOp == "/")
+    {
+      cout << "Second Number";
+      cin >> y;
+      double productDiv = x / y;
+      cout << productDiv;
+    }
+  else if (stringOp == "^")
+    {
+      cout << "Second Number (1st^2nd)";
+      cin >> y;
+      double numSquare = pow (x, y);
+      cout << numSquare;
+    }
+
+}
+
+int
+main ()
+{
+  char calcRedo;
+  funcCalcRedo ();
+  cout << "\nWould you like to use the calculator again? Y/N.";
+  cin >> calcRedo;
+  switch (calcRedo)
+    {
+    case 'Y':
+      main ();
+      break;
+    case 'N':
+      return 0;
+    defalt:
+      cout << "Non-recognized letter";
+      return 0;
+    }
+}
